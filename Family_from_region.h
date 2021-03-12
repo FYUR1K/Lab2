@@ -4,13 +4,13 @@
 #ifndef Family_from_region_H
 #define Family_from_region_H
 
-class Family_from_region():public Family, public Region
+class Family_from_region :public Family, public Region
 {
 public:
-    float income_including_payments(const size_t &number_of_people, const float &total_income , const float &payments_, const float &min_average_income_);
+    float average_income();
+    void setr1(const std::string &SURNAME, const size_t &COUNT, const float &income,const std::string &NAME, const float &AMOUNT, const float &THRESHHOLD);
+    void print();
+};
 
-
-    void print_Family_from_region ();
-}
 
 #endif
