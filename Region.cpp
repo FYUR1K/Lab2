@@ -1,13 +1,18 @@
 #include"Region.h"
+Region::Region(){
 
-Region::Region(const std::string &name_, const float &payments_, const float &min_average_income_){
-    name = name_;
-    payments = payments_;
-    min_average_income = min_average_income_;
 }
 
-void Region::print_Region_param(const std::string &name, const float &payments, const float &min_average_income ){
-    std::cout << "Name - " << name << '/n';
-    std::cout << "Payments = " << payments << '/n';
-    std::cout << "Min_average_income = " << min_average_income << '/n';   
+Region::Region(const std::string &NAME, const float &AMOUNT, const float &THRESHHOLD){
+    name = NAME;
+    amount_of_payment_per_family = AMOUNT;
+    threshold = THRESHHOLD;
 }
+
+void Region::print(){
+    std::cout << "Название: " << name << '\n';
+    std::cout << "Размер выплаты на семью: " << amount_of_payment_per_family << '\n';
+    std::cout << "Пороговое значение среднедушевого дохода: " << threshold << '\n'<< '\n';
+}
+
+
