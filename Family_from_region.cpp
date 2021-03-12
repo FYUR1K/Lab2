@@ -1,28 +1,29 @@
 #include"Family_from_region.h"
 
-float Family_from_region::income_including_payments(const size_t &number_of_people, const float &total_income,
- const float &payments, const float &min_average_income){
-     float AI = Family::average_income(const size_t &number_of_people,const float &total_income);
-     if(AI < min_average_income ){
-
-        return total_income + payments ;
-
-     } else {
-         return total_income;
-     }
-
-    
-    Family::print_Family_param(std::string &surname, size_t &number_of_people, float &total_income ){
-    std::cout << "Surname - " << surname << '/n';
-    std::cout << "Number of people = " << number_of_people << '/n';
-    std::cout << "Total income = " << income_including_payments() << '/n';   
+float Family_from_region::average_income(){
+    if((total_income / count_of_people) < threshold){
+        total_income += amount_of_payment_per_family;
+        return total_income/count_of_people;
+    } else{
+        return total_income / count_of_people;
+    }
 }
-    Region::print_Region_param(const std::string &name, const float &payments, const float &min_average_income ){
-    std::cout << "Name - " << name << '/n';
-    std::cout << "Payments = " << payments << '/n';
-    std::cout << "Min_average_income = " << min_average_income << '/n';   
-}
-     
 
- }
+void Family_from_region::print(){
+    Family::print();
+    Region::print();
+}
+
+void Family_from_region::setr1(const std::string &SURNAME, const size_t &COUNT, const float &income,const std::string &NAME,
+                               const float &AMOUNT, const float &THRESHHOLD){
+    surname = SURNAME;
+    count_of_people = COUNT;
+    total_income = income;
+    name = NAME;
+    amount_of_payment_per_family = AMOUNT;
+    threshold = THRESHHOLD;
+}
+
+
+
 
