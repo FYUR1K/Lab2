@@ -1,12 +1,9 @@
 #include"Region.h"
 Region::Region(){
-
 }
 
-Region::Region(const std::string &NAME, const float &AMOUNT, const float &THRESHHOLD){
-    name = NAME;
-    amount_of_payment_per_family = AMOUNT;
-    threshold = THRESHHOLD;
+Region::Region(const std::string &NAME, const float &AMOUNT, const float &THRESHHOLD):
+name(NAME),amount_of_payment_per_family(AMOUNT), threshold(THRESHHOLD) {
 }
 
 void Region::print(){
