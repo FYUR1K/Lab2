@@ -8,7 +8,8 @@ class Family_from_region :public Family, public Region
 {
 public:
     float average_income();
-    void setr1(const std::string &SURNAME, const size_t &COUNT, const float &income,const std::string &NAME, const float &AMOUNT, const float &THRESHHOLD);
+    void setr1(const std::string &SURNAME, const size_t &COUNT, const float &income,const std::string &NAME,
+               const float &AMOUNT, const float &THRESHHOLD);
     void print();
 };
 
