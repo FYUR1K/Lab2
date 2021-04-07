@@ -1,16 +1,18 @@
 #include<iostream>
+#include<vector>
 #ifndef Family_H
 #define Family_H
 
 class Family{
 public:
+    Family();
+    Family(const std::string &SURNAME, const size_t &COUNT, const float &income);
     float average_income();
-    void setr(const std::string &SURNAME, const size_t &COUNT, const float &income);
     void print();
 protected:
-    std::string surname;
-    size_t count_of_people = 0;
-    float total_income = 0;
+    std::string surname; //фамилия
+    size_t count_of_people; //кол-во людей
+    std::vector<float> total_income;//{сумарный доход в месяц, флажок добавления выплаты}
 };
 
 
