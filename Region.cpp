@@ -1,5 +1,5 @@
 #include"Region.h"
-Region::Region(){
+Region::Region(): name(""), amount_of_payment_per_family(0),threshold(0) {
 }
 
 Region::Region(const std::string &NAME, const float &AMOUNT, const float &THRESHHOLD):
