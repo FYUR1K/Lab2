@@ -10,8 +10,8 @@ public:
 
 protected:
     std::string name;
-    float amount_of_payment_per_family = 0;
-    float threshold = 0;
+    float amount_of_payment_per_family ;
+    float threshold ;
 
 
 };
